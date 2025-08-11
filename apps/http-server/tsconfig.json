@@ -1,0 +1,14 @@
+{ 
+    
+        "compilerOptions": {
+          "noEmit": false,
+          "outDir": "dist",
+          "rootDir": "./",
+          "module": "nodenext",
+          "target": "es2020"
+        },
+    "exclude": [
+        "node_modules"
+    ],
+    "extends":"@repo/typescript-config/base.json"
+}
