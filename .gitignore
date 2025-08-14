@@ -52,3 +52,7 @@ dist/
 *.rnv
 .rnv/
 
+configuration.ts
+src/configuration.ts
+packages/common_backend/configuration.ts
+deep/nested/folder/configuration.ts

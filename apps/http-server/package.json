@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@repo/typescript-config": "workspace:*",
+    "common_backend":"workspace:*",
     "@types/dotenv": "^8.2.3",
     "@types/express": "^5.0.3",
     "cors": "^2.8.5",
