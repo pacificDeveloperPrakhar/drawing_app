@@ -5,7 +5,9 @@
   "exports":{
     "./schema":"./schema/schema.ts",
     "./drizzle_connection":"./connections/drizzleConnection.ts",
-    "./redis_connection":"./connections/redisConnection.ts"
+    "./redis_connection":"./connections/redisConnection.ts",
+    "./AppError":"./utils/AppError.ts",
+    "./CatchAsync":"./utils/CatchAsync.ts"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

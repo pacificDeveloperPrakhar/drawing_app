@@ -11,7 +11,7 @@ import {
     jsonb,
     integer
 } from "drizzle-orm/pg-core";
-import { z } from "zod";
+import { email, z } from "zod";
 
 // users table
 export const users = pgTable("users", {
@@ -64,7 +64,8 @@ export const roomParticipants = pgTable("room_participants", {
 // export the zod validation schema
 export const insertRoomParticipant = createInsertSchema(roomParticipants).omit({
     id: true,
-    isActive: true
+    isActive: true,
+    joinedAt:true
 });
 
 // exporting the type of the roomParticipants
@@ -115,3 +116,18 @@ export const drawingElementsDataschema = z.object({
 
 // exporting the drawing data validation type for the zod
 export type insertDrawingElementData = z.infer<typeof drawingElementsDataschema>;
+
+// now export the schema for the login user
+export const loginUser=z.object({
+    email:z.string(),
+    password:z.string()
+})
+
+export type loginUser=z.infer<typeof loginUser>
+
+export const createRoomSchema=z.object({
+    code:z.string(),
+    name:z.string()
+})
+
+export type create_room=z.infer<typeof createRoomSchema>
